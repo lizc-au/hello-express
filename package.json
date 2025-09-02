@@ -1,0 +1,31 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "setup": "npm ci && npm test",
+    "check": "npm run lint && npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0",
+    "jest": "^30.1.2",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
+  }
+}
