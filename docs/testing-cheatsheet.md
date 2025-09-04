@@ -1,1 +1,7 @@
-# testing-cheatsheet.mdnnTODO: flesh this out later.
+# Testing (Jest)
+
+Quick commands:
+
+- npm test
+- npm run test:watch
+- npm run test:coverage
