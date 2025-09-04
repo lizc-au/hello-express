@@ -9,5 +9,4 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - run: npm run test:ci
-
+ - run: npm run test:cin - run: npm run test:coveragen - name: Upload coverage (lcov)n if: always()n uses: actions/upload-artifact@v4n with:n name: coverage-lcovn path: coverage/lcov.infon if-no-files-found: ignore
