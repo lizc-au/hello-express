@@ -11,3 +11,4 @@ POST /api/echo -> echoes JSON body
 
 [![Latest release](https://img.shields.io/github/v/release/lizc-au/hello-express?include_prereleases&sort=semver&t=1756832235)](https://github.com/lizc-au/hello-express/releases)
 
+rnrn## Testingrnrn- npm testrn- npm run test:watchrn- npm run test:coveragern- npm run coverage:open
