@@ -14,3 +14,5 @@ npm run release:rc
 
 ### Finalize rc
 npm run release:final
+
+> _Automated blunt-force pass 
