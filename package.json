@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "format": "prettier --write .",
-    "lint": "eslint src",
+    "lint": "eslint .",
     "setup": "npm ci && npm run test:ci",
     "check": "npm run lint && npm run test:ci",
     "release:patch": "powershell -NoProfile -Command \"npm version patch -m 'Release v%s'; git push --follow-tags; $v=(Get-Content package.json | ConvertFrom-Json).version; $tag='v'+$v; gh release create $tag -t $tag -n 'Automated patch release' --verify-tag\"",
