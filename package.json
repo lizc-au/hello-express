@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "setup": "npm ci && npm run test:ci",
-    "check": "npm run lint && npm run test:ci",
+    "check": "npm run format:check && npm run lint && npm run test:ci",
     "release:patch": "powershell -NoProfile -Command \"npm version patch -m 'Release v%s'; git push --follow-tags; $v=(Get-Content package.json | ConvertFrom-Json).version; $tag='v'+$v; gh release create $tag -t $tag -n 'Automated patch release' --verify-tag\"",
     "release:minor": "powershell -NoProfile -Command \"npm version minor -m 'Release v%s'; git push --follow-tags; $v=(Get-Content package.json | ConvertFrom-Json).version; $tag='v'+$v; gh release create $tag -t $tag -n 'Automated minor release' --verify-tag\"",
     "release:major": "powershell -NoProfile -Command \"npm version major -m 'Release v%s'; git push --follow-tags; $v=(Get-Content package.json | ConvertFrom-Json).version; $tag='v'+$v; gh release create $tag -t $tag -n 'Automated major release' --verify-tag\"",
@@ -19,7 +19,8 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --runInBand",
-    "coverage:open": "powershell -NoProfile -Command \"\"Start-Process (Resolve-Path 'coverage\\lcov-report\\index.html')\"\""
+    "coverage:open": "powershell -NoProfile -Command \"\"Start-Process (Resolve-Path 'coverage\\lcov-report\\index.html')\"\"",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": "",
