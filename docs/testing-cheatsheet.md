@@ -14,6 +14,7 @@ Open report: coverage\\lcov-report\\index.html
 Debug: In VS Code, use the **Debug Jest Tests** launch to set breakpoints in tests.
 
 Common assertions:
+
 - expect(x).toBe(y)
 - expect(obj).toEqual({ a:1 })
 - expect(arr).toContain(item)
@@ -25,4 +26,4 @@ const res = await request(app).get('/api/health');
 expect(res.status).toBe(200);
 expect(res.body).toEqual({ ok: true });
 
-> _Automated blunt-force pass 
+> \_Automated blunt-force pass
