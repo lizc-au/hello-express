@@ -1,11 +1,14 @@
 # Git & Versioning — Cheat Sheet (Liz)
 
 > ### Conventions: I’ll always say which window to use.
+>
 > - **Use PS7 (WT)** for everyday dev (posh-git, tabs).
 > - **Use PS7 SAFE** only if the shell/environment is misbehaving.
 
 ## 1) Daily flow (feature work)
+
 #### Window: PS7 (WT)
+
 ```pwsh
 git status
 git pull --rebase
@@ -118,13 +121,13 @@ git tag --list
 - Switch to SAFE only if the prompt/modules act weird (diagnosis run), then return to WT.
 
 > ## Notes for future additions:
+>
 > - **Fix merge conflicts** mini-guide
 > - **Rebase** vs **merge** quick comparison
 > - **Tag + GitHub Release** steps
->```makefile
->::contentReference[oaicite:0]{index=0}
->```
+>
+> ```makefile
+> ::contentReference[oaicite:0]{index=0}
+> ```
 
-
-
-> _Automated blunt-force pass 
+> \_Automated blunt-force pass
