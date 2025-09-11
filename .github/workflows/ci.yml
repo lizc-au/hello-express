@@ -1,5 +1,5 @@
 name: Node CI
-on: [push, pull_request]
+on:rn push:rn pull_request:rn workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -18,3 +18,4 @@ jobs:
           name: coverage-lcov
           path: coverage/lcov.info
           if-no-files-found: ignore
+
