@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - run: npm run test:ci
+      - run: npm run check
       - run: npm run test:coverage
       - name: Upload coverage (lcov)
         if: always()
@@ -18,3 +18,4 @@ jobs:
           name: coverage-lcov
           path: coverage/lcov.info
           if-no-files-found: ignore
+
