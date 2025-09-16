@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev: npm run dev",
+      "type": "npm",
+      "isBackground": true,
+      "script": "dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: npm test",
+      "type": "npm",
+      "group": {
+        "isDefault": true,
+        "kind": "test"
+      },
+      "script": "test"
+    },
+    {
+      "label": "Lint: npm run lint",
+      "type": "npm",
+      "script": "lint"
+    },
+    {
+      "label": "Format: npm run format",
+      "type": "npm",
+      "script": "format"
+    }
+  ]
+}
