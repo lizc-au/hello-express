@@ -1,7 +1,17 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
   "eslint.useFlatConfig": true,
-  "eslint.validate": ["javascript"]
+  "eslint.validate": ["javascript"],
+  "security.workspace.trust.enabled": true,
+  "editor.formatOnSave": true,
+  "problems.autoReveal": false,
+  "git.autofetch": true,
+  "npm.autoDetect": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "task.autoDetect": "off",
+  "security.workspace.trust.startupPrompt": "never",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  }
 }
