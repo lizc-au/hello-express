@@ -18,6 +18,6 @@ rnrn## Testingrnrn- npm testrn- npm run test:watchrn- npm run test:coveragern- n
 - Coverage & thresholds: https://github.com/lizc-au/dev-cheatsheets/blob/main/docs/coverage-cheatsheet.md
 - Git PR workflow (protected main): https://github.com/lizc-au/dev-cheatsheets/blob/main/docs/git-pr-workflow.md
 - YAML via Base64 (CRLF + 2/4/6): https://github.com/lizc-au/dev-cheatsheets/blob/main/docs/yaml-base64-template.md
- <!-- ruleset-v2 -->
- <!-- ruleset-smoke -->
-rn## Branch rulesrn- Required checks: CodeQL, buildrn- Strict up-to-date: ONrn- Do not require on create: ONrn- Ruleset JSON: [docs/ruleset-main.json](./docs/ruleset-main.json)rn
+   <!-- ruleset-v2 -->
+   <!-- ruleset-smoke -->
+  rn## Branch rulesrn- Required checks: CodeQL, buildrn- Strict up-to-date: ONrn- Do not require on create: ONrn- Ruleset JSON: [docs/ruleset-main.json](./docs/ruleset-main.json)rn
