@@ -1,29 +1,149 @@
-# Testing (Jest)
+# Testing Cheat Sheet
 
-Quick commands:
+## Jest, npm test, coverage, watch
 
-- npm test
-- npm run test:watch
-- npm run test:coverage
+- Verified CI on 2025-09-07
 
-CI: npm run test:ci
-Watch mode: npm run test:watch
-Coverage: npm run test:coverage (thresholds 80/70/50/80)
-Open report: coverage\\lcov-report\\index.html
+## How to run tests
 
-Debug: In VS Code, use the **Debug Jest Tests** launch to set breakpoints in tests.
+Quick start:
 
-Common assertions:
+```bash
+npm test
+```
 
-- expect(x).toBe(y)
-- expect(obj).toEqual({ a:1 })
-- expect(arr).toContain(item)
-- await expect(promise).resolves.toBe(value)
-- await expect(promise).rejects.toThrow()
+CI mode (non-interactive):
 
-supertest pattern:
-const res = await request(app).get('/api/health');
-expect(res.status).toBe(200);
-expect(res.body).toEqual({ ok: true });
+```bash
+npm run test:ci
+```
 
-> \_Automated blunt-force pass
+Watch mode (local dev):
+
+```bash
+npm test -- --watch
+```
+
+Smoke check (format+lint+tests):
+
+```bash
+npm run check
+```
+
+## Coverage
+
+Generate coverage (HTML + lcov):
+
+```bash
+npm test -- --coverage
+```
+
+Open the HTML report:
+
+```powershell
+Start-Process ".\coverage\lcov-report\index.html"
+```
+
+## Focused runs
+
+Single file:
+
+```bash
+npm test -- src/app.test.js
+```
+
+By test name (regex):
+
+```bash
+npm test -- -t "echo"
+```
+
+## Lint & format
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+Fix formatting with Prettier:
+
+```bash
+npm run format
+```
+
+Verify formatting only:
+
+```bash
+npm run format:check
+```
+
+## Jest CLI quick ref
+
+Watch re-run:
+
+```bash
+npm test -- --watch
+```
+
+Run in single process (debuggy envs):
+
+```bash
+npm test -- --runInBand
+```
+
+Fail fast (stop on first fail):
+
+```bash
+npm test -- --bail
+```
+
+Related tests for changed files:
+
+```bash
+git diff --name-only HEAD~1 | npx jest --findRelatedTests
+```
+
+## Troubleshooting
+
+Jest not found:
+
+```bash
+npm ci
+```
+
+Pre-commit hook blocks commit:
+
+```bash
+npx lint-staged --debug
+```
+
+Coverage folder missing:
+
+```bash
+npm test -- --coverage
+```
+
+Port in use during dev (EADDRINUSE):
+
+```powershell
+Get-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess | Stop-Process -Force
+```
+
+## Write your first test
+
+Create a file at src/example.test.js with this content:
+
+```javascript
+describe("math", () => {
+  it("adds 1 + 1 = 2", () => {
+    expect(1 + 1).toBe(2);
+  });
+});
+```
+
+Run it only:
+
+```bash
+npm test -- src/example.test.js
+```
