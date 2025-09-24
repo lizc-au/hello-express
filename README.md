@@ -4,6 +4,8 @@
 
 [![Latest release](https://img.shields.io/github/v/release/lizc-au/hello-express?include_prereleases&sort=semver&t=1756832235)](https://github.com/lizc-au/hello-express/releases)
 
+> Minimal Express demo. For a fuller template (more tests, workflows, docs), see **my-node-app**. This repo stays lean on purpose.
+
 **Run:** npm run dev
 
 **Env:** PORT=4000 in .env
